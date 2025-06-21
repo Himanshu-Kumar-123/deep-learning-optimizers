@@ -62,10 +62,16 @@ $\gamma$ here is a hyperparameter.
 
 $m_t$ is an accumulator variable.
 
-![Optimizer Image 7](images/gd_vs_mt.gif)
+<p>
+  <img src="images/gd_vs_mt.gif" alt="Optimizer Animation" width="400"/>
+</p>
+
+> 👉 Click the image to view the animation.
 
 Orange ball → Momentum based GD  
 Blue ball → Vanilla GD
 
+
 Note that momentum based GD takes more time or more oscillations to settle down than vanilla GD because of the “history” it carries.
 
+### 🔸 Adaptive Gradient (Adagrad)
