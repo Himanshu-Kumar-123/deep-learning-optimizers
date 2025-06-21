@@ -32,14 +32,15 @@ $$
 w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
 $$
 
-Gradient Descent Update Rule:
-    w_{t+1} = w_t - α * dL/dw_t
+$$
+w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
+$$
 
-Where:
-    w_t     → weight at time step t
-    α       → learning rate (step size)
-    dL/dw_t → gradient of the loss function with respect to weight w_t
-    w_{t+1} → updated weight for the next iteration
+Where:  
+`w_t`       → weight at time step `t`  
+`α`         → learning rate  
+`dL/dw_t`   → gradient of the loss function w.r.t. `w_t`  
+`w_{t+1}`   → updated weight for the next iteration
 
 
 Momentum based Gradient Descent uses both historical and current gradient info.
