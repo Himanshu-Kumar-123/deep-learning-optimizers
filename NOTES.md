@@ -118,4 +118,5 @@ $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
 - This accumulates the squared gradients over time.  
 - Used in the denominator → adapts the learning rate per parameter.  
 - If a parameter has large past gradients, $v_t$ becomes large → its learning rate becomes small, and vice versa.  
-- ⚠️ **Downside of Adagrad:** The learning rate keeps shrinking over time → may stop learning too early.
+
+⚠️ **Downside of Adagrad:** The learning rate keeps shrinking over time → may stop learning too early.
