@@ -1,7 +1,3 @@
-# deep-learning-optimizers
-
-
-
 ## 🔍 Optimizer Comparison Summary
 
 This project compares the performance of several popular optimizers on a classification task. The training and validation metrics were observed over 20 epochs.
