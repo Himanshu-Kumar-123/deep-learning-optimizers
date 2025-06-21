@@ -75,3 +75,16 @@ Blue ball → Vanilla GD
 Note that momentum based GD takes more time or more oscillations to settle down than vanilla GD because of the “history” it carries.
 
 ### 🔸 Adaptive Gradient (Adagrad)
+
+Let’s consider the below 2 scenarios -
+
+[ Scenario 1 ]
+
+![Optimizer Image 4](images/movie.jpg)
+
+Ex: Akshay Kumar creates movies more frequently than Aamir Khan, however the movies created by Aamir Khan have a very high impact on the IMDB ratings.
+
+![Optimizer Image 5](images/neurons.jpg)
+
+Weights associated with feature $x_3$ will not have equal opportunity to get trained as much as $x_2$.
+Hence, sparse features won’t get sufficient opportunity to get trained.
