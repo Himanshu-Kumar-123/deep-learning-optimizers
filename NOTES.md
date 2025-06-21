@@ -28,7 +28,9 @@ Gradient Descent uses only the current gradient (point gradient).
 
 **Update Rule:**
 
-![Optimizer Image 4](image4.png)
+$$
+w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
+$$
 
 Momentum based Gradient Descent uses both historical and current gradient info.
 
