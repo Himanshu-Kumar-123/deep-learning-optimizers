@@ -1,6 +1,6 @@
 ## Optimizers
 
-#### 🔸 Gradient Descent
+### 🔸 Gradient Descent
 
 Also known as **Batch Gradient Descent**.
 
@@ -18,7 +18,7 @@ $\alpha$ → learning rate
 $\frac{dL}{dw_t}$ → gradient of the loss function w.r.t. $w_t$  
 $w_{t+1}$ → updated weight for the next iteration
 
-### Major problem of Gradient Descent approach - (can’t reach global minima):
+#### Major problem of Gradient Descent approach - (can’t reach global minima):
 
 #### Getting stuck in local minima -
 
