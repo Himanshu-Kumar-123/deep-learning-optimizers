@@ -12,6 +12,10 @@ $$
 w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
 $$
 
+**Update Rule:** \( w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t} \)
+
+
+
 Where:  
 $w_t$ → weight at time step $t$  
 $\alpha$ → learning rate  
