@@ -112,3 +112,10 @@ $v_t$ → sum of squares of past gradients up to time $t$
 $v_{t-1}$ → sum of squares of past gradients up to time $t - 1$  
 $\epsilon$ → small constant to prevent division by zero (e.g., $10^{-8}$)  
 $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
+
+**Notes:**
+
+- This accumulates the squared gradients over time.  
+- Used in the denominator → adapts the learning rate per parameter.  
+- If a parameter has large past gradients, $v_t$ becomes large → its learning rate becomes small, and vice versa.  
+- ⚠️ **Downside of Adagrad:** The learning rate keeps shrinking over time → may stop learning too early.
