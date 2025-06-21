@@ -57,13 +57,10 @@ $\gamma$ → momentum coefficient (e.g., 0.9)
 $m_{t-1}$ → momentum from the previous step  
 $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$  
 
-![Optimizer Image 5](image5.png)
 
-![Optimizer Image 6](image6.png)
+$\gamma$ here is a hyperparameter.
 
-Gamma here is a hyperparameter.
-
-`momentum_t` is an accumulator variable.
+$m_t$ is an accumulator variable.
 
 ![Optimizer Image 7](image7.png)
 
