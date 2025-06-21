@@ -41,22 +41,21 @@ Momentum based Gradient Descent uses both historical and current gradient info.
 **Update Rule:**
 
 $$
-w_{t+1} = w_t - \text{momentum}_t
+w_{t+1} = w_t - m_t
 $$
 
 $$
-\text{momentum}_t = \gamma \cdot \text{momentum}_{t-1} + (1 - \gamma) \cdot \frac{dL}{dw_t}
+m_t = \gamma \cdot m_{t-1} + (1 - \gamma) \cdot \frac{dL}{dw_t}
 $$
 
 Where:
 
-$w_t$ → weight at time step $t$  
-$\text{momentum}_t$ → accumulated momentum at step $t$  
+$w_{t+1}$ → updated weight for the next iteration
+$w_t$  → weight at time step $t$  
+$m_t$ → momentum at step $t$  
 $\gamma$ → momentum coefficient (e.g., 0.9)  
-$\text{momentum}_{t-1}$ → momentum from the previous step  
-$\frac{dL}{dw_t}$ → gradient of the loss function w.r.t. $w_t$  
-$w_{t+1}$ → updated weight for the next iteration  
-
+$m_{t-1}$ → momentum from the previous step  
+$\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$  
 
 ![Optimizer Image 5](image5.png)
 
