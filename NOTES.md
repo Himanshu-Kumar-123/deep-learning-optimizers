@@ -13,6 +13,7 @@ w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
 $$
 
 Where:  
+
 $w_t$ → weight at time step $t$  
 $\alpha$ → learning rate  
 $\frac{dL}{dw_t}$ → gradient of the loss function w.r.t. $w_t$  
@@ -33,7 +34,7 @@ Can’t reach global minima
 
 ---
 
-Optimizers help to reach the global minima of loss curve with higher probability.
+Different **Optimizers** help to reach the global minima of loss curve with higher probability.
 
 ---
 
