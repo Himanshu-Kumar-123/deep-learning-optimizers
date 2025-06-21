@@ -10,7 +10,7 @@
 
 #### Saddle points : Minima in one direction but maxima in another direction.
 
-![Optimizer Image 3](image3.png)
+![Optimizer Image 3](images/saddle.jpg)
 
 ---
 
