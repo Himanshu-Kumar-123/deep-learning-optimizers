@@ -1,5 +1,4 @@
 ## Optimizers
----
 
 #### 🔸 Gradient Descent
 
