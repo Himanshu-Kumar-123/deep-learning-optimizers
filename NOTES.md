@@ -1,5 +1,23 @@
 ## Optimizers
 
+## Gradient Descent
+
+Also known as **Batch Gradient Descent**.
+
+- Gradient Descent uses only the current gradient (point gradient).
+
+**Update Rule:**
+
+$$
+w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
+$$
+
+Where:  
+$w_t$ → weight at time step $t$  
+$\alpha$ → learning rate  
+$\frac{dL}{dw_t}$ → gradient of the loss function w.r.t. $w_t$  
+$w_{t+1}$ → updated weight for the next iteration
+
 ### Major problem of Gradient Descent approach - (can’t reach global minima):
 
 #### Getting stuck in local minima -
