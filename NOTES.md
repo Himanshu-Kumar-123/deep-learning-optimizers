@@ -62,7 +62,7 @@ $\gamma$ here is a hyperparameter.
 
 $m_t$ is an accumulator variable.
 
-![Optimizer Image 7](image7.png)
+![Optimizer Image 7](images/gd_vs_mt.gif)
 
 Orange ball → Momentum based GD  
 Blue ball → Vanilla GD
