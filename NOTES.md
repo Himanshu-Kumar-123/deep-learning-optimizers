@@ -88,3 +88,27 @@ Ex: Akshay Kumar creates movies more frequently than Aamir Khan, however the mov
 
 Weights associated with feature $x_3$ will not have equal opportunity to get trained as much as $x_2$.
 Hence, sparse features won’t get sufficient opportunity to get trained.
+
+[ Scenario 2 ]
+
+Weights are randomly initialized due to which some weights may be closer to the minima while others may be too far. Training them for the same number of epochs would not be the right way.
+
+**Update Rule:**
+
+$$
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{v_t + \epsilon}} \cdot \frac{dL}{dw_t}
+$$
+
+$$
+v_t = v_{t-1} + \left( \frac{dL}{dw_t} \right)^2
+$$
+
+Where:
+
+$w_{t+1}$ → updated weight for the next iteration  
+$w_t$ → weight at time step $t$  
+$\alpha$ → initial learning rate  
+$v_t$ → sum of squares of past gradients up to time $t$  
+$v_{t-1}$ → sum of squares of past gradients up to time $t - 1$  
+$\epsilon$ → small constant to prevent division by zero (e.g., $10^{-8}$)  
+$\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
