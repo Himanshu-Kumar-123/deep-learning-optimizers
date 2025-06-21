@@ -6,7 +6,7 @@
 
 ![Optimizer Image 1](images/minima.jpg)
 
-![Optimizer Image 2](image2.png)
+![Optimizer Image 2](images/minima2.jpg)
 
 #### Saddle points : Minima in one direction but maxima in another direction.
 
