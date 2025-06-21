@@ -1,6 +1,7 @@
 ## Optimizers
+---
 
-## Gradient Descent
+#### 🔸 Gradient Descent
 
 Also known as **Batch Gradient Descent**.
 
