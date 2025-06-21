@@ -4,7 +4,7 @@
 
 #### Getting stuck in local minima -
 
-![Optimizer Image 1](image1.png)
+![Optimizer Image 1](minima.jpg)
 
 ![Optimizer Image 2](image2.png)
 
