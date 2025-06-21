@@ -21,13 +21,13 @@ $w_{t+1}$ → updated weight for the next iteration
 #### Major problem of Gradient Descent approach - 
 Can’t reach global minima
 
-#### Getting stuck in local minima -
+- Getting stuck in local minima -
 
 ![Optimizer Image 1](images/minima.jpg)
 
 ![Optimizer Image 2](images/minima2.jpg)
 
-#### Saddle points : Minima in one direction but maxima in another direction.
+- Saddle points : Minima in one direction but maxima in another direction.
 
 ![Optimizer Image 3](images/saddle.jpg)
 
