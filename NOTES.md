@@ -32,36 +32,31 @@ Can’t reach global minima
 
 ![Optimizer Image 3](images/saddle.jpg)
 
----
-
 Different **Optimizers** help to reach the global minima of loss curve with higher probability.
 
----
-
-### Different variants of Optimizers :
-
----
-
-#### 🔸 Momentum based Gradient Descent :
-
-Gradient Descent uses only the current gradient (point gradient).
-
-**Update Rule:**
-
-$$
-w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
-$$
-
-Where:  
-$w_t$ → weight at time step $t$  
-$\alpha$ → learning rate  
-$\frac{dL}{dw_t}$ → gradient of the loss function w.r.t. $w_t$  
-$w_{t+1}$ → updated weight for the next iteration
-
+### 🔸 Momentum based Gradient Descent
 
 Momentum based Gradient Descent uses both historical and current gradient info.
 
 **Update Rule:**
+
+$$
+w_{t+1} = w_t - \text{momentum}_t
+$$
+
+$$
+\text{momentum}_t = \gamma \cdot \text{momentum}_{t-1} + (1 - \gamma) \cdot \frac{dL}{dw_t}
+$$
+
+Where:
+
+$w_t$ → weight at time step $t$  
+$\text{momentum}_t$ → accumulated momentum at step $t$  
+$\gamma$ → momentum coefficient (e.g., 0.9)  
+$\text{momentum}_{t-1}$ → momentum from the previous step  
+$\frac{dL}{dw_t}$ → gradient of the loss function w.r.t. $w_t$  
+$w_{t+1}$ → updated weight for the next iteration  
+
 
 ![Optimizer Image 5](image5.png)
 
