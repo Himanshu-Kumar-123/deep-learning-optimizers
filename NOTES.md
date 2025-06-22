@@ -41,7 +41,7 @@ Momentum based Gradient Descent uses both historical and current gradient info.
 **Update Rule:**
 
 $$
-w_{t+1} = w_t - m_t
+w_{t+1} = w_t - \alpha \cdot m_t
 $$
 
 $$
@@ -51,7 +51,8 @@ $$
 Where:
 
 $w_{t+1}$ → updated weight for the next iteration
-$w_t$  → weight at time step $t$  
+$w_t$  → weight at time step $t$
+$\alpha$ → learning rate
 $m_t$ → momentum at step $t$  
 $\gamma$ → momentum coefficient (e.g., 0.9)  
 $m_{t-1}$ → momentum from the previous step  
