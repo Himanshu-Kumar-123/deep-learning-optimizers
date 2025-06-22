@@ -55,7 +55,7 @@ $w_t$  → weight at time step $t$
 $m_t$ → momentum at step $t$  
 $\gamma$ → momentum coefficient (e.g., 0.9)  
 $m_{t-1}$ → momentum from the previous step  
-$\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$  
+$\frac{dL}{dw_t}$ → gradient of the loss function  respect to $w_t$  
 
 
 $\gamma$ here is a hyperparameter.
@@ -86,7 +86,7 @@ Ex: Akshay Kumar creates movies more frequently than Aamir Khan, however the mov
 
 ![Optimizer Image 5](images/neurons.jpg)
 
-Weights associated with feature $x_3$ will not have equal opportunity to get trained as much as $x_2$.
+Weights associated  feature $x_3$ will not have equal opportunity to get trained as much as $x_2$.
 Hence, sparse features won’t get sufficient opportunity to get trained.
 
 [ Scenario 2 ]
@@ -159,8 +159,6 @@ $$
 w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t} + \epsilon} \cdot \{m}_t
 $$
 
-With:
-
 $$
 m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \frac{dL}{dw_t}
 $$
@@ -182,6 +180,9 @@ $\beta_2$ → decay rate for the velocity (e.g., 0.999)
 $\epsilon$ → small constant to prevent division by zero (e.g., $10^{-8}$)  
 $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$  
 
+---
+### Visual comparison of Optimizers
+
 <p>
   <img src="images/optimizer_compare.gif" alt="Optimizers Comparision" width="400"/>
 </p>
@@ -189,3 +190,56 @@ $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
 > 👉 Click the image to view the animation.
 
 > Animation of 5 gradient descent methods on a surface: gradient descent (cyan), momentum (magenta), AdaGrad (white), RMSProp (green), Adam (blue). Left well is the global minimum; right well is a local minimum.
+
+---
+### Equations for all Optimizers
+
+#### 🔸 Gradient Descent
+
+$$
+w_{t+1} = w_t - \alpha \cdot \frac{dL}{dw_t}
+$$
+
+#### 🔸 Momentum based Gradient Descent
+
+$$
+w_{t+1} = w_t - m_t
+$$
+
+$$
+m_t = \gamma \cdot m_{t-1} + (1 - \gamma) \cdot \frac{dL}{dw_t}
+$$
+
+#### 🔸 Adagrad
+
+$$
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{v_t + \epsilon}} \cdot \frac{dL}{dw_t}
+$$
+
+$$
+v_t = v_{t-1} + \left( \frac{dL}{dw_t} \right)^2
+$$
+
+#### 🔸 RMSprop
+
+$$
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{v_t + \epsilon}} \cdot \frac{dL}{dw_t}
+$$
+
+$$
+v_t = \beta \cdot v_{t-1} + (1 - \beta) \cdot \left( \frac{dL}{dw_t} \right)^2
+$$
+
+#### 🔸 Adam
+
+$$
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t} + \epsilon} \cdot \{m}_t
+$$
+
+$$
+m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \frac{dL}{dw_t}
+$$
+
+$$
+v_t = \beta_2 \cdot v_{t-1} + (1 - \beta_2) \cdot \left( \frac{dL}{dw_t} \right)^2
+$$
