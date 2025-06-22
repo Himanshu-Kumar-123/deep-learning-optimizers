@@ -74,7 +74,7 @@ Blue ball → Vanilla GD
 
 Note that momentum based GD takes more time or more oscillations to settle down than vanilla GD because of the “history” it carries.
 
-### 🔸 Adaptive Gradient (Adagrad)
+### 🔸 Adagrad (Adaptive Gradient)
 
 Let’s consider the below 2 scenarios -
 
@@ -120,3 +120,69 @@ $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
 - If a parameter has large past gradients, $v_t$ becomes large → its learning rate becomes small, and vice versa.  
 
 ⚠️ **Downside of Adagrad:** The learning rate keeps shrinking over time → may stop learning too early.
+
+### 🔸 RMSprop (Root Mean Squared Propagation)
+
+- Fixes AdaGrad’s problem of rapidly decreasing learning rates.
+
+**Update Rule:**
+
+$$
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{v_t + \epsilon}} \cdot \frac{dL}{dw_t}
+$$
+
+$$
+v_t = \beta \cdot v_{t-1} + (1 - \beta) \cdot \left( \frac{dL}{dw_t} \right)^2
+$$
+
+Where:
+
+$w_{t+1}$ → updated weight for the next iteration  
+$w_t$ → weight at time step $t$  
+$\alpha$ → learning rate  
+$v_t$ → exponentially decaying average of past squared gradients  
+$v_{t-1}$ → moving average from previous step  
+$\beta$ → decay rate (e.g., 0.9)  
+$\epsilon$ → small constant to avoid division by zero (e.g., $10^{-8}$)  
+$\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$ 
+
+### 🔸 Adam (Adaptive Moment Estimation)
+
+- Adam = RMSprop + Momentum
+
+**Update Rule:**
+
+$$
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t} + \epsilon} \cdot \{m}_t
+$$
+
+With:
+
+$$
+m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \frac{dL}{dw_t}
+$$
+
+$$
+v_t = \beta_2 \cdot v_{t-1} + (1 - \beta_2) \cdot \left( \frac{dL}{dw_t} \right)^2
+$$
+
+
+Where:
+
+$w_{t+1}$ → updated weight for the next iteration  
+$w_t$ → weight at time step $t$  
+$\alpha$ → learning rate  
+$m_t$ → momentum  
+$v_t$ → velocity  
+$\beta_1$ → decay rate for the momentum (e.g., 0.9)  
+$\beta_2$ → decay rate for the velocity (e.g., 0.999)  
+$\epsilon$ → small constant to prevent division by zero (e.g., $10^{-8}$)  
+$\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$  
+
+**Notes:**
+
+- Combines **momentum** ($m_t$) and **RMSprop-style scaling** ($v_t$).  
+- Uses **bias correction** to account for initial values being zero.  
+- Works well in practice and is widely used in deep learning.  
+- ⚡ Fast convergence, robust to noisy gradients and sparse data.
+
