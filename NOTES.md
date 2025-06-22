@@ -149,6 +149,7 @@ $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
 ### 🔸 Adam (Adaptive Moment Estimation)
 
 - Adam = RMSprop + Momentum
+- Most widely used in deep learning.
 
 **Update Rule:**
 
@@ -179,10 +180,10 @@ $\beta_2$ → decay rate for the velocity (e.g., 0.999)
 $\epsilon$ → small constant to prevent division by zero (e.g., $10^{-8}$)  
 $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$  
 
-**Notes:**
+<p>
+  <img src="images/optimizer_compare.gif" alt="Optimizers Comparision" width="400"/>
+</p>
 
-- Combines **momentum** ($m_t$) and **RMSprop-style scaling** ($v_t$).  
-- Uses **bias correction** to account for initial values being zero.  
-- Works well in practice and is widely used in deep learning.  
-- ⚡ Fast convergence, robust to noisy gradients and sparse data.
+> 👉 Click the image to view the animation.
 
+> Animation of 5 gradient descent methods on a surface: gradient descent (cyan), momentum (magenta), AdaGrad (white), RMSProp (green), Adam (blue). Left well is the global minimum; right well is a local minimum.
