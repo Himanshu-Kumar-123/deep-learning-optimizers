@@ -204,7 +204,7 @@ $$
 #### 🔸 Momentum based Gradient Descent
 
 $$
-w_{t+1} = w_t - m_t
+w_{t+1} = w_t - \alpha \cdot m_t
 $$
 
 $$
