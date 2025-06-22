@@ -140,11 +140,13 @@ Where:
 $w_{t+1}$ → updated weight for the next iteration  
 $w_t$ → weight at time step $t$  
 $\alpha$ → learning rate  
-$v_t$ → exponentially decaying average of past squared gradients  
+$v_t$ → running average of past squared gradients   
 $v_{t-1}$ → moving average from previous step  
 $\beta$ → decay rate (e.g., 0.9)  
 $\epsilon$ → small constant to avoid division by zero (e.g., $10^{-8}$)  
 $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$ 
+
+- It is like AdaGrad but instead of **accumulating forever**, it **decays** older gradients --> prevents learning rate from shrinking to zero.
 
 ### 🔸 Adam (Adaptive Moment Estimation)
 
@@ -173,8 +175,8 @@ Where:
 $w_{t+1}$ → updated weight for the next iteration  
 $w_t$ → weight at time step $t$  
 $\alpha$ → learning rate  
-$m_t$ → momentum  
-$v_t$ → velocity  
+$m_t$ → momentum at step $t$  
+$v_t$ → running average of past squared gradients  
 $\beta_1$ → decay rate for the momentum (e.g., 0.9)  
 $\beta_2$ → decay rate for the velocity (e.g., 0.999)  
 $\epsilon$ → small constant to prevent division by zero (e.g., $10^{-8}$)  
