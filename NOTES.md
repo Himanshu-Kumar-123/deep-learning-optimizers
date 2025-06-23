@@ -157,7 +157,7 @@ $\frac{dL}{dw_t}$ → gradient of the loss function with respect to $w_t$
 **Update Rule:**
 
 $$
-w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t} + \epsilon} \cdot \{m}_t
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t + \epsilon}} \cdot \{m}_t
 $$
 
 $$
@@ -234,7 +234,7 @@ $$
 #### 🔸 Adam
 
 $$
-w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t} + \epsilon} \cdot \{m}_t
+w_{t+1} = w_t - \frac{\alpha}{\sqrt{\{v}_t + \epsilon}} \cdot \{m}_t
 $$
 
 $$
